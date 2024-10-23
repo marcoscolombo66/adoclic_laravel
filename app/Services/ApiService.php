@@ -28,11 +28,15 @@ class ApiService
     }
 
     private function storeEntities($entries)
-    {
-        $categories = Category::whereIn('category', ['Animals', 'Security'])->get()->keyBy('category');
+{
+    $categories = Category::whereIn('category', ['Animals', 'Security'])->get()->keyBy('category');
 
-        foreach ($entries as $entry) {
-            if (in_array($entry['Category'], ['Animals', 'Security'])) {
+    foreach ($entries as $entry) {
+        if (in_array($entry['Category'], ['Animals', 'Security'])) {
+            // Verifica si el link ya existe
+            $exists = Entity::where('link', $entry['Link'])->exists();
+
+            if (!$exists) { // Solo inserta si no existe
                 Entity::create([
                     'api' => $entry['API'],
                     'description' => $entry['Description'],
@@ -42,4 +46,5 @@ class ApiService
             }
         }
     }
+}
 }

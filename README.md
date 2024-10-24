@@ -1,13 +1,12 @@
 
-
-
 # API ADOCLIC
 
 ### Get from categories
 
-```http
+``http
   GET /api/{Category}  
-```
+``
+
 **Examples:**
 
 http://localhost:8000/api/Animals
@@ -20,17 +19,15 @@ http://localhost:8000/api/Security
 
 ### Fetch data from api or entity json file.
 
-```http
+``http
   http://localhost:8000/fetch-data
-```
+``
 
 
-### Verify categoris in database
+### Verify categories in database
 http://localhost:8000/categories
 
 
-### TEST UNITARIOS
 
-IMAGEN
 
 

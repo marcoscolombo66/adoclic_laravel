@@ -1,33 +1,28 @@
 
-# API ADOCLIC
+# TEST ADOCLIC API EN LARAVEL
 
-### Get from categories
+### Obtener de categorías
 
 ``http
   GET /api/{Category}  
 ``
 
-**Examples:**
+**Ejemplos:**
 
 http://localhost:8000/api/Animals
 http://localhost:8000/api/Security
 
 
-| Parameter | Type     | Description                |
+| Parametro | Tipo     | Descripción                |
 | :-------- | :------- | :------------------------- |
-| `Category` | `string` | **Required.** Category of item to fetch |
+| `Category` | `string` | **Requerido.** Categoría a buscar |
 
-### Fetch data from api or entity json file.
+### Buscar data de la api or del archivo JSON entity.
 
 ``http
   http://localhost:8000/fetch-data
 ``
 
 
-### Verify categories in database
+### Verificar categorias en la base de datos:
 http://localhost:8000/categories
-
-
-
-
-
